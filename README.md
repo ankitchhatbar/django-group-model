@@ -139,7 +139,7 @@ The `AbstractGroup` class implements the same attributes as Django's default `Gr
 
 - **name**
   A unique `CharField` with a `max_length` of 150.
-  If you would like to override this field, and **you want to call it something else***, you must also override the `__str__` and `natural_key` methods to return the new field.
+  If you would like to override this field, and **you want to call it something else**, you must also override the `__str__` and `natural_key` methods to return the new field.
   
   **Example:**
   
