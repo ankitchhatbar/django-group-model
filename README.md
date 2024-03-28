@@ -102,7 +102,7 @@ from django_group_model.models import AbstractGroup
 
 class Role(AbstractGroup):
     # You can add custom fields here
-    
+
     class Meta:
         verbose_name = "role"
         verbose_name_plual = "roles"
@@ -154,7 +154,7 @@ The `AbstractGroup` class implements the same attributes as Django's default `Gr
   
       def natural_key(self):
           return (self.new_name,)
-      
+  
       class Meta:
           verbose_name = "role"
           verbose_name_plual = "roles"
@@ -166,7 +166,7 @@ The `AbstractGroup` class implements the same attributes as Django's default `Gr
 
 ## Contributing and Issue Tracking
 
-We welcome contributions and feedback! If you encounter any issues with the package or have suggestions for improvement, please don't hesitate to open an issue on GitHub.
+We welcome contributions and feedback! If you encounter any issues with the package or have suggestions for improvement, please don't hesitate to open an issue on [GitHub](https://github.com/ankitchhatbar/django-group-model).
 
 When opening an issue, please provide as much detail as possible, including steps to reproduce the problem, your environment (Python version, Django version, etc.), and any relevant error messages.
 
