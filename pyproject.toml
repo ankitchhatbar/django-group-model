@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-group-model"
+version = "0.0.1"
+authors = [
+  { name="Ankit Chhatbar" },
+]
+description = "A Django app to override the default Group model"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "django >= 3.0"
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    'Framework :: Django :: 3.0',
+    'Framework :: Django :: 3.1',
+    'Framework :: Django :: 3.2',
+    'Framework :: Django :: 4.0',
+    'Framework :: Django :: 4.1',
+    'Framework :: Django :: 4.2',
+    'Framework :: Django :: 5.0',
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content"
+]
+
+[project.urls]
+Homepage = "https://github.com/ankitchhatbar/django-group-model"
+Documentation = "https://github.com/ankitchhatbar/django-group-model"
+Repository = "https://github.com/ankitchhatbar/django-group-model"
+Issues = "https://github.com/ankitchhatbar/django-group-model/issues"
