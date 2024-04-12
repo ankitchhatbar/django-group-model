@@ -28,12 +28,14 @@ Install using pip:
 pip install django-group-model
 ```
 
-Add `'django_group_model'`  to your `INSTALLED_APPS`. Make sure to place it before any apps that define the `Group` or `User` models.
+Add `'django_group_model'` to your `INSTALLED_APPS`. Make sure to place it after the default Django apps (if any) and before any custom apps that define the `Group` or `User` models.
 
 ```python
 INSTALLED_APPS = [
     ...
-    'django_group_model',
+    'django.contrib.staticfiles',
+    'django_group_model', # Add this
+    ...
 ]
 ```
 
@@ -83,6 +85,15 @@ class User(AbstractUser, ...):
 ```
 
 Once again, the name of the field is important. See below on how to customize the name of the model. Also take note of the `related_name` and `related_query_name`. Most of the time, the pattern shown above should work. For a deeper understanding see [Django docs here](https://docs.djangoproject.com/en/5.0/ref/models/fields/#django.db.models.ForeignKey.related_name).
+
+Since the name of the new model is `Group`, when accessing Groups attached to a permission, you will have to use the `custom_group_set` accessor.
+
+```python
+permisssion = Permisssion.objects.first()
+groups = permission.custom_group_set.all()
+```
+
+This only applies if your custom model is called `Group`. If you name it something else (see below). It will use Django's default conventions for the reverse accessor.
 
 ### Customizing the name of the Group model
 
